@@ -1,0 +1,8 @@
+{% extends 'blog/wraper.html' %}
+
+    {% block content %}
+     <h2 class="class-info">   {{ articles.title }}</h2>
+     <h2 class="class-info">Опубликовано:    {{ articles.date|date:"Y-m-d в H:i:s" }}</h2>
+    <p>{{ articles.post|safe|linebreaks }}</p>
+
+    {% endblock %}
